@@ -6,7 +6,7 @@ interface Props {
   close: () => void;
 }
 
-export const useModal = create<Props>((set, get) => ({
+export const useModal = create<Props>(() => ({
   isOpen: false,
   open: () => ({ isOpen: true }),
   close: () => ({ isOpen: false }),

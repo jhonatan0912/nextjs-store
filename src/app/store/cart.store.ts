@@ -17,7 +17,7 @@ export const useCartStore = create<CartState>((set, get) => ({
   total: () =>
     get().items.reduce((acc, item) => (acc += item.price * item.quantity), 0),
   add: (product: Product) =>
-    set((state: any) => {
+    set((state) => {
       if (state.items.includes(product)) return state;
       product.quantity += 1;
 
@@ -26,14 +26,14 @@ export const useCartStore = create<CartState>((set, get) => ({
       };
     }),
   addQuantity: (product: Product) =>
-    set((state: any) => {
+    set((state) => {
       product.quantity += 1;
       return {
         items: state.items,
       };
     }),
   removeQuantity: (product: Product) =>
-    set((state: any) => {
+    set((state) => {
       if (product.quantity === 1) return state;
 
       product.quantity -= 1;
@@ -42,7 +42,7 @@ export const useCartStore = create<CartState>((set, get) => ({
       };
     }),
   remove: (product: Product) =>
-    set((state: any) => {
+    set((state) => {
       product.quantity = 0;
       return {
         items: state.items.filter((item: Product) => item !== product),

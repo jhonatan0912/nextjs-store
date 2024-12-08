@@ -1,7 +1,6 @@
-import { useModal } from "@/app/store/modal.store";
 
 const OrderConfirmed = () => {
-  const { isOpen } = useModal();
+  // const { isOpen } = useModal();
 
   return (
     <div className="modal w-screen h-screen">
