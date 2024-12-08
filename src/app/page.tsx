@@ -3,9 +3,7 @@ import ProductCard from "@/components/products/ProductCard";
 import ProductsGrid from "@/components/products/ProductsGrid";
 import { products } from "@/data/products";
 
-export const Home = () => {
-  console.log(products);
-
+const Home = () => {
   return (
     <main className="px-5 pt-7 desktop:flex desktop:gap-10 max-w-[1400px] mx-auto desktop:justify-between">
       <section>
